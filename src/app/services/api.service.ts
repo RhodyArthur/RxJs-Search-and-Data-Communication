@@ -9,7 +9,7 @@ import { Data } from '../data';
 export class ApiService {
     // Simulate an API call
     simulateApiCall(searchTerm: string): Observable<string[]> {
-      const allResults = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape', 'hello'];
+      const allResults = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape'];
       return of(allResults.filter(item => item.toLocaleLowerCase().includes(searchTerm.toLowerCase())))
       .pipe(delay(500))
   

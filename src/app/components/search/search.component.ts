@@ -27,12 +27,12 @@ export class SearchComponent implements AfterViewInit{
   ngAfterViewInit(): void {
 
     // access input field using @viewChild
-    // const inputElement = this.searchInput.nativeElement;
-    const inputElement = document.getElementById('input-field') as HTMLInputElement
+    const inputElement = this.searchInput.nativeElement;
+    // const inputElement = document.getElementById('input-field') as HTMLInputElement
 
     if(inputElement){
     // create an observable from the search input field
-    this.searchInput$ = fromEvent(inputElement, 'input');
+    this.searchInput$ = fromEvent(inputElement, 'keyup');
 
     this.searchInput$.pipe(
       // use debounce to delay emissions
