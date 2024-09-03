@@ -1,0 +1,19 @@
+<h1>RxJs Search and Data Combination</h1>
+
+<input type="text" name="input" id="input-field" #searchInput placeholder="Search word...">
+@if (loading) {
+    <p>loading...</p>
+}
+
+@if(error) {
+    <p>{{error}}</p>
+}
+
+@if (searchResults.length === 0) {
+    <p>{{notFoundMsg}}</p>
+}
+@else {
+    @for (item of searchResults; track $index) {
+        <p >{{item}}</p>
+    }
+}
