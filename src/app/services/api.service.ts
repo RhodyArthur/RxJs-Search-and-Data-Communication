@@ -10,7 +10,7 @@ export class ApiService {
     // Simulate an API call
     simulateApiCall(searchTerm: string): Observable<string[]> {
       const allResults = ['apple🍎', 'banana🍌', 'cherry🍒', 'coconut🥥', 'watermelon🍉', 'grapes🍇', 'orange🍊', 'mango🥭', 'strawberry🍓', 'pineapple🍍'];
-      return of(allResults.filter(item => item.toLocaleLowerCase().includes(searchTerm.toLowerCase())))
+      return of(allResults.filter(item => item.toLocaleLowerCase() === searchTerm.toLowerCase()))
       .pipe(delay(500))
   
     }
