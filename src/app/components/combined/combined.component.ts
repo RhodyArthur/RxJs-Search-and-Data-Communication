@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { catchError, combineLatest, delay, finalize, map, of, throwError } from 'rxjs';
+import { User } from '../../data';
 
 @Component({
   selector: 'app-combined',
@@ -10,7 +11,7 @@ import { catchError, combineLatest, delay, finalize, map, of, throwError } from 
 })
 export class CombinedComponent {
 
-  combinedData: { user: any; posts: string[] } | null = null;
+  combinedData: { user: User; posts: string[] } | null = null;
   loadingUserDetails = true;
   loadingUserPosts = true;
   error: string | null = null;
@@ -19,8 +20,9 @@ export class CombinedComponent {
     // Simulating user details api endpoint
     const userDetails$ = of({
       id: 1,
-      name: 'John Doe',
-      email: 'john@doe.com',
+      name: 'Adom Joy',
+      email: 'adom@joy.com',
+      gender: 'Female'
     }).pipe(
       delay(1000),
       finalize(() => (this.loadingUserDetails = false)),
@@ -32,8 +34,8 @@ export class CombinedComponent {
 
     // Simulating user posts api endpoint
     const userPosts$ = of([
-      'Post 1: Why Angular!',
-      'Post 2: This is the second post.',
+      'Post 1: It\'s about to go down!',
+      'Post 2: Hello World.',
       "Post 3: Let's have some fun",
     ]).pipe(
       delay(1500),

@@ -1,0 +1,48 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+input {
+    padding: 1rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: .9;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+    text-align: center;
+}
+
+.spinner {
+    border: 8px solid #94c094; 
+    border-top: 8px solid #012c0f;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin-top: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

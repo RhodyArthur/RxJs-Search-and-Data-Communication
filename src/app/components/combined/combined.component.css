@@ -1,0 +1,48 @@
+.combine-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .loading-container {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .loading-msg {
+    color: #333;
+  }
+
+  
+  .error {
+    color: #a94442;
+  }
+  
+  .content-container {
+
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .posts-list {
+    list-style-type: none;
+  }
+  
+  .post-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .post-item:last-child {
+    border-bottom: none;
+  }
+  
